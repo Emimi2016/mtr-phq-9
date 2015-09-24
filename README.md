@@ -61,6 +61,7 @@ Have a look at the repository for more information.
 * Meteor Core
   * [meteor-base](http://github.com/meteor/meteor/tree/devel/packages/meteor-base)
   * [blaze-html-templates](https://github.com/meteor/meteor/tree/devel/packages/blaze-html-templates)
+  * [react](http://github.com/meteor/meteor/tree/devel/packages/react)
   * [ecmascript](https://github.com/meteor/meteor/tree/devel/packages/ecmascript)
   * [es5-shim](https://github.com/meteor/meteor/tree/devel/packages/es5-shim)
   * [jquery](https://github.com/meteor/meteor/tree/devel/packages/jquery)
@@ -77,7 +78,6 @@ Have a look at the repository for more information.
   * [spiderable](http://github.com/meteor/meteor/tree/devel/packages/spiderable)
   * [tomwasd:flow-router-seo](https://github.com/tomwasd/flow-router-seo)
 * UI and UX
-  * [react](http://github.com/meteor/meteor/tree/devel/packages/react)
   * [fastclick](http://github.com/meteor/meteor/tree/devel/packages/fastclick)
   * [natestrauser:animate-css](http://github.com/nate-strauser/meteor-animate-css)
   * [fortawesome:fontawesome](https://github.com/MeteorPackaging/Font-Awesome)
