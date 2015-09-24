@@ -2,7 +2,7 @@ App.Footer = React.createClass({
     render() {
         return (
             <footer className="footer">
-                FOOTER
+                <p className="message">Feel Better</p>
             </footer>
         )
     }
