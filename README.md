@@ -16,9 +16,9 @@ Mobile-first PHQ-9 prototype built with React and Meteor.
 
 ## Roadmap
 
-* Add tests
-* Setup build environments
-* Security
+* Setup build environments (for testing)
+* Security (permissions, accounts)
+* Server (methods, publications, indexes)
 
 ## How to use
 
