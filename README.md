@@ -71,7 +71,7 @@ Have a look at the repository for more information.
   * [standard-minifiers](https://github.com/meteor/meteor/tree/devel/packages/standard-minifiers)
   * [tracker](https://github.com/meteor/meteor/tree/devel/packages/tracker)
 * Routing
-  * [kadira:flow-router-ssr](https://github.com/kadirahq/flow-router/tree/ssr)
+  * [kadira:flow-router](https://github.com/kadirahq/flow-router)
   * [kadira:react-layout](https://github.com/kadirahq/meteor-react-layout)
   * [meteorhacks:fast-render](https://github.com/meteorhacks/fast-render)
 * SEO
