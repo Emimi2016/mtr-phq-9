@@ -79,13 +79,10 @@ Have a look at the repository for more information.
   * [tomwasd:flow-router-seo](https://github.com/tomwasd/flow-router-seo)
 * UI and UX
   * [fastclick](http://github.com/meteor/meteor/tree/devel/packages/fastclick)
-  * [natestrauser:animate-css](http://github.com/nate-strauser/meteor-animate-css)
-  * [fortawesome:fontawesome](https://github.com/MeteorPackaging/Font-Awesome)
 * Development
   * [insecure](https://github.com/meteor/meteor/tree/devel/packages/insecure)
   * [autopublish](https://github.com/meteor/meteor/tree/devel/packages/autopublish)
   * [flemay:less-autoprefixer](https://github.com/flemay/less-autoprefixer)
-  * [momentjs:moment](http://github.com/moment/moment/)
   * [msavin:mongol](http://github.com/msavin/Mongol)
 
 ### Folder structure
