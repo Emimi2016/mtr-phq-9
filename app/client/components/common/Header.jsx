@@ -2,7 +2,7 @@ App.Header = React.createClass({
     render() {
         return (
             <header className="header">
-                HEADER
+                <h1 className="title">PHQ-9</h1>
             </header>
         )
     }
