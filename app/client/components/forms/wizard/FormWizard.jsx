@@ -60,9 +60,44 @@ App.FormWizard = React.createClass({
                                         saveValues={this.saveValues}/>
             case 3:
                 return <App.QuestionThree fieldValues={fieldValues}
+                                        nextStep={this.nextStep}
+                                        previousStep={this.previousStep}
+                                        saveValues={this.saveValues}/>
+            case 4:
+                return <App.QuestionFour fieldValues={fieldValues}
+                                        nextStep={this.nextStep}
+                                        previousStep={this.previousStep}
+                                        saveValues={this.saveValues}/>
+            case 5:
+                return <App.QuestionFive fieldValues={fieldValues}
+                                        nextStep={this.nextStep}
+                                        previousStep={this.previousStep}
+                                        saveValues={this.saveValues}/>
+            case 6:
+                return <App.QuestionSix fieldValues={fieldValues}
+                                        nextStep={this.nextStep}
+                                        previousStep={this.previousStep}
+                                        saveValues={this.saveValues}/>
+            case 7:
+                return <App.QuestionSeven fieldValues={fieldValues}
+                                        nextStep={this.nextStep}
+                                        previousStep={this.previousStep}
+                                        saveValues={this.saveValues}/>
+            case 8:
+                return <App.QuestionEight fieldValues={fieldValues}
+                                        nextStep={this.nextStep}
+                                        previousStep={this.previousStep}
+                                        saveValues={this.saveValues}/>
+            case 9:
+                return <App.QuestionNine fieldValues={fieldValues}
+                                        nextStep={this.nextStep}
+                                        previousStep={this.previousStep}
+                                        saveValues={this.saveValues}/>
+            case 10:
+                return <App.WizardConfirm fieldValues={fieldValues}
                                           previousStep={this.previousStep}
                                           submitRegistration={this.submitRegistration}/>
-            case 4:
+            case 11:
                 return <App.WizardPositive fieldValues={fieldValues}/>
         }
     },
