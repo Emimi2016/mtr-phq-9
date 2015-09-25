@@ -16,7 +16,7 @@ App.QuestionOne = React.createClass({
     render: function () {
         return (
             <div className="question">
-                <h2 className="title">Little interest or pleasure in doing things?</h2>
+                <h2>Little interest or pleasure in doing things?</h2>
                 {['Not at all', 'Several days', 'More than half the days', 'Nearly every day'].map(this.renderOptions.bind(this, 'radio', 'question1'))}
                 <button className="button primary" onClick={this.nextStep}>Save &amp; Continue</button>
             </div>

@@ -4,8 +4,7 @@
 
 // buttons
 
-.button,
-button {
+.button {
   cursor: pointer;
   margin: 0;
   padding: @space-base;
@@ -72,68 +71,10 @@ button {
   }
 }
 
-// lists
-
-.list {
-  list-style-type: square;
-
-  &.unstyled {
-    padding: 0;
-    list-style-type: none;
-  }
-
-  &.inline {
-    display: inline;
-    padding: 0;
-    list-style-type: none;
-
-    .item {
-      display: inline;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    text-indent: @space-large;
-  }
-}
-
-// images
-
-.image {
+.label {
   display: block;
-  margin: @space-base auto;
 
-  &.fluid {
-    width: @full;
+  &.radio {
+    cursor: pointer;
   }
-
-  &.background {
-    position: absolute;
-    margin: 0;
-    z-index: -1;
-
-    &.top {
-      top: 0;
-    }
-
-    &.right {
-      right: 0;
-    }
-
-    &.bottom {
-      bottom: 0;
-    }
-
-    &.left {
-      left: 0;
-    }
-  }
-}
-
-// other
-
-hr {
-  margin: 0;
-  border: 0;
-  border-bottom: @space-atomic solid @divider-color;
 }
