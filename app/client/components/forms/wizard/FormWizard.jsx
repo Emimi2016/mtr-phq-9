@@ -74,11 +74,9 @@ App.FormWizard = React.createClass({
 
         return (
             <div className="form wizard module">
+                <progress className="progress" style={style}></progress>
                 {this.showStep()}
-                <div className="progress module">
-                    <span className="progress-step">Step {this.state.step}</span>
-                    <progress className="progress" style={style}></progress>
-                </div>
+                <span className="progress-step">{this.state.step} / 9</span>
             </div>
         )
     }

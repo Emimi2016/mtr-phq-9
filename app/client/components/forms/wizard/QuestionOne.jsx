@@ -7,16 +7,16 @@ App.QuestionOne = React.createClass({
         }.bind(this)
 
         return (
-            <label key={index}>
-                <input type={type} name={name} value={value} defaultChecked={isChecked()} /> {value}
+            <label for={name} key={index} className="radio label">
+                <input type={type} name={name} className="radio input" value={value} defaultChecked={isChecked()} /> {value}
             </label>
         )
     },
 
     render: function () {
         return (
-            <div>
-                <h2>Little interest or pleasure in doing things?</h2>
+            <div className="question">
+                <h2 className="title">Little interest or pleasure in doing things?</h2>
                 {['Not at all', 'Several days', 'More than half the days', 'Nearly every day'].map(this.renderOptions.bind(this, 'radio', 'question1'))}
                 <button className="button primary" onClick={this.nextStep}>Save &amp; Continue</button>
             </div>
