@@ -1,4 +1,4 @@
-App.QuestionOne = React.createClass({
+App.QuestionThree = React.createClass({
     renderOptions: function(type, name, value, index) {
         var isChecked = function() {
             if (type == 'radio') return value == this.props.fieldValues[name]
@@ -16,8 +16,9 @@ App.QuestionOne = React.createClass({
     render: function () {
         return (
             <div className="question">
-                <h2>Little interest or pleasure in doing things?</h2>
-                {['Not at all', 'Several days', 'More than half the days', 'Nearly every day'].map(this.renderOptions.bind(this, 'radio', 'question1'))}
+                <h2>Trouble falling or staying asleep, or sleeping too much?</h2>
+                {['Not at all', 'Several days', 'More than half the days', 'Nearly every day'].map(this.renderOptions.bind(this, 'radio', 'question3'))}
+                <button className="fluid secondary button" onClick={this.props.previousStep}>Back</button>
                 <button className="fluid primary button" onClick={this.nextStep}>Save &amp; Continue</button>
             </div>
         )
@@ -27,9 +28,9 @@ App.QuestionOne = React.createClass({
         e.preventDefault()
 
         // Get values via query selector
-        var answer = document.querySelector('input[name="question1"]:checked');
+        var answer = document.querySelector('input[name="question3"]:checked');
         var data = {
-            question1: answer
+            question3: answer
         }
 
         this.props.saveValues(data)
