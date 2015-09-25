@@ -83,7 +83,6 @@ Have a look at the repository for more information.
   * [insecure](https://github.com/meteor/meteor/tree/devel/packages/insecure)
   * [autopublish](https://github.com/meteor/meteor/tree/devel/packages/autopublish)
   * [flemay:less-autoprefixer](https://github.com/flemay/less-autoprefixer)
-  * [msavin:mongol](http://github.com/msavin/Mongol)
 
 ### Folder structure
 

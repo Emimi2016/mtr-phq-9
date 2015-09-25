@@ -21,7 +21,6 @@ insecure                # Allow all DB writes from clients (for prototyping)
 react
 fastclick
 flemay:less-autoprefixer
-msavin:mongol
 kadira:flow-router
 kadira:react-layout
 meteorhacks:fast-render
