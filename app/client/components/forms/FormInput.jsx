@@ -4,46 +4,31 @@ App.FormInput = React.createClass({
         label: React.PropTypes.string,
         type: React.PropTypes.string,
         name: React.PropTypes.string,
-        placeholder: React.PropTypes.string,
         value: React.PropTypes.string,
-        onKeyUp: React.PropTypes.func,
-        onBlur: React.PropTypes.func
     },
     shouldComponentUpdate() {
         return true;
     },
     render() {
-        const {type, label, icon, name, placeholder, value, onKeyUp, onBlur } = this.props;
+        const {type, label, name, value } = this.props;
         let input;
 
-        var className = 'input group';
+        var className = 'radio input group';
         if (this.props.hasError) {
             className += ' negative';
         }
 
-        switch (type) {
-            case 'textarea':
-                input = (
-                    <textarea type={ type } className="input" name={ name.toLowerCase() } placeholder={ placeholder }
-                              defaultValue={ value } onKeyUp={ onKeyUp } onBlur={ onBlur }></textarea>
-                );
-                break;
-            default:
-                input = (
-                    <input type={ type } className="input" name={ name.toLowerCase() } placeholder={ placeholder }
-                           defaultValue={ value } onKeyUp={ onKeyUp } onBlur={ onBlur }/>
-                );
-                break;
-        }
+        input = (
+            <input type={ type } className="input" name={ name.toLowerCase() } defaultValue={ value }/>
+        );
 
 
         return (
             <div className={ className }>
-                { label === 'icon' ?
-                    <span className="icon"><i className={ icon }></i></span>
-                    :
-                    <label htmlFor={ name.toLowerCase() } className="label">{ name }</label> }
-                { input }
+                <label htmlFor={ name.toLowerCase() } className="label">
+                    { input }
+                    { value }
+                </label>
             </div>
         )
 
