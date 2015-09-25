@@ -18,8 +18,10 @@ App.QuestionFive = React.createClass({
             <div className="question">
                 <h2>Poor appetite or overeating?</h2>
                 {['Not at all', 'Several days', 'More than half the days', 'Nearly every day'].map(this.renderOptions.bind(this, 'radio', 'question5'))}
-                <button className="fluid secondary button" onClick={this.props.previousStep}>Back</button>
-                <button className="fluid primary button" onClick={this.nextStep}>Save &amp; Continue</button>
+                <div className="buttons">
+                    <button className="fluid secondary button" onClick={this.props.previousStep}>Back</button>
+                    <button className="fluid primary button" onClick={this.nextStep}>Save &amp; Continue</button>
+                </div>
             </div>
         )
     },

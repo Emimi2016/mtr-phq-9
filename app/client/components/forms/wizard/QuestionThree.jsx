@@ -1,6 +1,6 @@
 App.QuestionThree = React.createClass({
-    renderOptions: function(type, name, value, index) {
-        var isChecked = function() {
+    renderOptions: function (type, name, value, index) {
+        var isChecked = function () {
             if (type == 'radio') return value == this.props.fieldValues[name]
 
             return false
@@ -8,7 +8,8 @@ App.QuestionThree = React.createClass({
 
         return (
             <label key={index} className="radio label">
-                <input type={type} name={name} className="radio input" value={value} defaultChecked={isChecked()} /> {value}
+                <input type={type} name={name} className="radio input" value={value}
+                       defaultChecked={isChecked()}/> {value}
             </label>
         )
     },
@@ -18,8 +19,10 @@ App.QuestionThree = React.createClass({
             <div className="question">
                 <h2>Trouble falling or staying asleep, or sleeping too much?</h2>
                 {['Not at all', 'Several days', 'More than half the days', 'Nearly every day'].map(this.renderOptions.bind(this, 'radio', 'question3'))}
-                <button className="fluid secondary button" onClick={this.props.previousStep}>Back</button>
-                <button className="fluid primary button" onClick={this.nextStep}>Save &amp; Continue</button>
+                <div className="buttons">
+                    <button className="fluid secondary button" onClick={this.props.previousStep}>Back</button>
+                    <button className="fluid primary button" onClick={this.nextStep}>Save &amp; Continue</button>
+                </div>
             </div>
         )
     },

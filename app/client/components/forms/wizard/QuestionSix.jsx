@@ -18,8 +18,10 @@ App.QuestionSix = React.createClass({
             <div className="question">
                 <h2>Feeling bad about yourself - or that you are a failure or have let yourself or your family down?</h2>
                 {['Not at all', 'Several days', 'More than half the days', 'Nearly every day'].map(this.renderOptions.bind(this, 'radio', 'question6'))}
-                <button className="fluid secondary button" onClick={this.props.previousStep}>Back</button>
-                <button className="fluid primary button" onClick={this.nextStep}>Save &amp; Continue</button>
+                <div className="buttons">
+                    <button className="fluid secondary button" onClick={this.props.previousStep}>Back</button>
+                    <button className="fluid primary button" onClick={this.nextStep}>Save &amp; Continue</button>
+                </div>
             </div>
         )
     },
