@@ -16,6 +16,9 @@ App.Diagnosis = React.createClass({
     },
 
     renderReports() {
+        // TODO: create as child component to scores component
+        // loop through each report object
+        // if status negative, show doctors component
         return this.data.reports.map(function (report) {
             return (
                 <small className="message" key={report._id}>{report.message}</small>
@@ -24,6 +27,8 @@ App.Diagnosis = React.createClass({
     },
 
     renderScores() {
+        // TODO: integrate with reports component
+        // loop through using from to variables in reports
         return this.data.scores.map(function (score) {
             if (score.sum >= 0 && score.sum <= 4) {
                 return (
