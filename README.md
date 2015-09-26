@@ -117,6 +117,8 @@ environments/       # Environments folder
   * [kadira:flow-router](https://github.com/kadirahq/flow-router)
   * [kadira:react-layout](https://github.com/kadirahq/meteor-react-layout)
   * [meteorhacks:fast-render](https://github.com/meteorhacks/fast-render)
+* Collections
+  * [reywood:publish-composite](https://github.com/englue/meteor-publish-composite)
 * SEO
   * [spiderable](http://github.com/meteor/meteor/tree/devel/packages/spiderable)
   * [tomwasd:flow-router-seo](https://github.com/tomwasd/flow-router-seo)
