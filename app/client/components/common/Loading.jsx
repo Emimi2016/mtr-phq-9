@@ -1,7 +1,7 @@
 App.Loading = React.createClass({
     render() {
         return (
-            <div className="animated fadeIn loading module">
+            <div className="loading module">
                 Loading...
             </div>
         )
