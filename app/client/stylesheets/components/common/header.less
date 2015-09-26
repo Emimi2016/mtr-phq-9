@@ -3,25 +3,34 @@
 // header styles
 
 .header {
+  display: flex;
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
-  padding: @space-base;
+  width: auto;
+  height: @fluid-quarter;
+  padding: 0 @space-base;
   background-color: @gray-light;
+  color: @light;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 
-  .logo {
-    margin: 0;
-    
-    .route {
-      color: @light;
-      text-decoration: none;
+  @media (min-width: @phone-width) {
+    width: @full;
+    padding: 0;
+  }
 
-      &:hover,
-      &:focus {
-        color: @primary-color;
-      }
+  .statement {
+    flex: none;
+    width: @full;
+
+    @media (min-width: @phone-width) {
+      width: @three-quarters;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: @half;
     }
   }
 }

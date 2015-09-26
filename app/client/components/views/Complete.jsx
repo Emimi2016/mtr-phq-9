@@ -1,7 +1,7 @@
-App.Referrals = React.createClass({
+App.Complete = React.createClass({
     render() {
         return (
-            <main className="animated fadeIn referrals view">
+            <main className="animated fadeIn complete view">
                 COMPLETE VIEW
             </main>
         )

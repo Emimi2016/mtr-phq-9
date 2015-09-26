@@ -5,27 +5,20 @@
 .view {
   flex: 1;
   position: relative;
-  margin-top: @space-huge + @space-small;
+  margin-top: @fluid-quarter;
   padding: @space-base;
   z-index: 1;
   background: @background-color;
 
-  @media (min-width: @desktop-width) {
-    margin-right: @sixteenth;
-    margin-left: @sixteenth;
+  @media (min-width: @tablet-width) {
+    padding: @space-large @sixteenth;
   }
 
-  @media (min-width: @huge-desktop-width) {
-    margin-right: @eighth;
-    margin-left: @eighth;
+  @media (min-width: @desktop-width) {
+    padding: @space-huge @eighth;
   }
 
   @media (min-width: @giant-desktop-width) {
-    margin-right: @eighth + @sixteenth;
-    margin-left: @eighth + @sixteenth;
-  }
-
-  .statement {
-    margin: @space-base auto;
+    padding: @space-jumbo @eighth + @sixteenth;
   }
 }
