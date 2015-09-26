@@ -15,3 +15,12 @@ FlowRouter.route('/diagnosis', {
         });
     }
 });
+
+FlowRouter.route('/appointments', {
+    name: 'Appointments',
+    action() {
+        ReactLayout.render(App.Layout, {
+            content: <App.Appointments />
+        });
+    }
+});

@@ -17,7 +17,7 @@ App.Diagnosis = React.createClass({
         return this.data.scores.map(function (score) {
             if (score.sum >= 0 && score.sum <= 4) {
                 return (
-                    <div className="centered scores module">
+                    <div className="centered scores module" key={score._id}>
                         <h1 className="positive score">You scored a {score.sum}!
                             <small className="message">You don't seem to be depressed... stay happy.</small>
                         </h1>
@@ -26,7 +26,7 @@ App.Diagnosis = React.createClass({
             }
             if (score.sum >= 5 && score.sum <= 9) {
                 return (
-                    <div className="centered scores module">
+                    <div className="centered scores module" key={score._id}>
                         <h1 className="caution score">You scored a {score.sum}!
                             <small className="message">You seem to have mild depression... all things pass.</small>
                         </h1>
@@ -35,7 +35,7 @@ App.Diagnosis = React.createClass({
             }
             if (score.sum >= 10 && score.sum <= 14) {
                 return (
-                    <div className="scores module">
+                    <div className="scores module" key={score._id}>
                         <h1 className="negative score">You scored a {score.sum}!
                             <small className="message">You seem to have moderate depression... how about seeing one of these
                                 specialists?</small>
@@ -46,7 +46,7 @@ App.Diagnosis = React.createClass({
             }
             if (score.sum >= 15 && score.sum <= 19) {
                 return (
-                    <div className="score module">
+                    <div className="scores module" key={score._id}>
                         <h1 className="negative score">You scored a {score.sum}!
                             <small className="message">You seem to have moderately severe depression... consider seeing one of
                                 these specialists.</small>
@@ -57,7 +57,7 @@ App.Diagnosis = React.createClass({
             }
             if (score.sum >= 20 && score.sum <= 27) {
                 return (
-                    <div className="scores module">
+                    <div className="scores module" key={score._id}>
                         <h1 className="negative score">You scored a {score.sum}!
                             <small className="message">You seem to have severe depression... please schedule to see one of these
                                 specialists.</small>
