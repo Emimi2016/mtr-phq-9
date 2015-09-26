@@ -28,6 +28,11 @@ App.Questions = React.createClass({
             question9: $(event.target).find('input[name="9"]:checked').val()
         };
 
+        $('.radio.input:checked').each(function() {
+            var value = $(this).val();
+            console.log(value);
+        });
+
         console.log(surveyResults);
 
         // TODO: Evaluate and route to positive or negative
