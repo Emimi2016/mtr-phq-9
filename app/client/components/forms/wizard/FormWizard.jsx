@@ -11,8 +11,20 @@ var fieldValues = {
 };
 
 App.FormWizard = React.createClass({
-    mixins: [],
+    mixins: [ReactMeteorData],
     PropTypes: {},
+
+    getMeteorData() {
+        var data = {},
+            selector = {username: 'admin'},
+            handle = Meteor.subscribe('questions', selector);
+
+        if (handle.ready()) {
+            data.questions = Questions.find({}, {sort: {createdAt: -1}}).fetch();
+        }
+
+        return data;
+    },
 
     getInitialState: function () {
         return {
@@ -43,7 +55,17 @@ App.FormWizard = React.createClass({
         // success return this.nextStop(). If it fails,
         // show the user the error but don't advance
 
-        this.nextStep()
+        // TODO: Route to positive or negative
+    },
+
+    renderQuestion() {
+        return this.data.questions.map(function (question) {
+            return (
+                <div className="question" key={question._id}>
+                    <h2 className="title">{question.title}</h2>
+                </div>
+            )
+        });
     },
 
     showStep: function () {
@@ -60,19 +82,19 @@ App.FormWizard = React.createClass({
                                         saveValues={this.saveValues}/>
             case 3:
                 return <App.QuestionThree fieldValues={fieldValues}
-                                        nextStep={this.nextStep}
-                                        previousStep={this.previousStep}
-                                        saveValues={this.saveValues}/>
+                                          nextStep={this.nextStep}
+                                          previousStep={this.previousStep}
+                                          saveValues={this.saveValues}/>
             case 4:
                 return <App.QuestionFour fieldValues={fieldValues}
-                                        nextStep={this.nextStep}
-                                        previousStep={this.previousStep}
-                                        saveValues={this.saveValues}/>
+                                         nextStep={this.nextStep}
+                                         previousStep={this.previousStep}
+                                         saveValues={this.saveValues}/>
             case 5:
                 return <App.QuestionFive fieldValues={fieldValues}
-                                        nextStep={this.nextStep}
-                                        previousStep={this.previousStep}
-                                        saveValues={this.saveValues}/>
+                                         nextStep={this.nextStep}
+                                         previousStep={this.previousStep}
+                                         saveValues={this.saveValues}/>
             case 6:
                 return <App.QuestionSix fieldValues={fieldValues}
                                         nextStep={this.nextStep}
@@ -80,19 +102,19 @@ App.FormWizard = React.createClass({
                                         saveValues={this.saveValues}/>
             case 7:
                 return <App.QuestionSeven fieldValues={fieldValues}
-                                        nextStep={this.nextStep}
-                                        previousStep={this.previousStep}
-                                        saveValues={this.saveValues}/>
+                                          nextStep={this.nextStep}
+                                          previousStep={this.previousStep}
+                                          saveValues={this.saveValues}/>
             case 8:
                 return <App.QuestionEight fieldValues={fieldValues}
-                                        nextStep={this.nextStep}
-                                        previousStep={this.previousStep}
-                                        saveValues={this.saveValues}/>
+                                          nextStep={this.nextStep}
+                                          previousStep={this.previousStep}
+                                          saveValues={this.saveValues}/>
             case 9:
                 return <App.QuestionNine fieldValues={fieldValues}
-                                        nextStep={this.nextStep}
-                                        previousStep={this.previousStep}
-                                        saveValues={this.saveValues}/>
+                                         nextStep={this.nextStep}
+                                         previousStep={this.previousStep}
+                                         saveValues={this.saveValues}/>
             case 10:
                 return <App.WizardConfirm fieldValues={fieldValues}
                                           previousStep={this.previousStep}
