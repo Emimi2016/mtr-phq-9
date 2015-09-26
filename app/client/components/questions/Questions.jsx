@@ -13,42 +13,47 @@ App.Questions = React.createClass({
         return data;
     },
 
-    submitSurvey: function () {
+    submitSurvey: function (event) {
+        event.preventDefault();
+
+        var surveyResults = {
+            question1: $(event.target).find('input[name="1"]:checked').val(),
+            question2: $(event.target).find('input[name="2"]:checked').val(),
+            question3: $(event.target).find('input[name="3"]:checked').val(),
+            question4: $(event.target).find('input[name="4"]:checked').val(),
+            question5: $(event.target).find('input[name="5"]:checked').val(),
+            question6: $(event.target).find('input[name="6"]:checked').val(),
+            question7: $(event.target).find('input[name="7"]:checked').val(),
+            question8: $(event.target).find('input[name="8"]:checked').val(),
+            question9: $(event.target).find('input[name="9"]:checked').val()
+        };
+
+        console.log(surveyResults);
+
         // TODO: Evaluate and route to positive or negative
+
     },
 
     renderQuestion() {
         return this.data.questions.map(function (question) {
             return (
-                <div className="question" key={question._id}>
-                    <h2 className="title">{question.title}</h2>
+                <section className="question" key={question._id}>
+                    <h2 className="title">{question.order}. {question.title}</h2>
 
                     <div className="radio input group">
-                        <label className="radio label">
-                            <input type="radio" className="radio input" name={question.order} value={question.choices[0].value} />
-                            {question.choices[0].choice}
-                        </label>
-                        <label className="radio label">
-                            <input type="radio" className="radio input" name={question.order} value={question.choices[1].value} />
-                            {question.choices[1].choice}
-                        </label>
-                        <label className="radio label">
-                            <input type="radio" className="radio input" name={question.order} value={question.choices[2].value} />
-                            {question.choices[2].choice}
-                        </label>
-                        <label className="radio label">
-                            <input type="radio" className="radio input" name={question.order} value={question.choices[3].value} />
-                            {question.choices[3].choice}
-                        </label>
+                        <App.FormInput type="radio" label={question.choices[0].choice} name={question.order} value={question.choices[0].value} />
+                        <App.FormInput type="radio" label={question.choices[1].choice} name={question.order} value={question.choices[1].value} />
+                        <App.FormInput type="radio" label={question.choices[2].choice} name={question.order} value={question.choices[2].value} />
+                        <App.FormInput type="radio" label={question.choices[3].choice} name={question.order} value={question.choices[3].value} />
                     </div>
-                </div>
+                </section>
             )
         });
     },
 
     render: function () {
         return (
-            <form className="questions form module">
+            <form className="questions form module" onSubmit={this.submitSurvey}>
                 {(this.data.questions) ? this.renderQuestion() : <App.Loading />}
                 <button type="submit" className="fluid primary button">Feel Better</button>
             </form>

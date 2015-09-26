@@ -1,6 +1,5 @@
 App.FormInput = React.createClass({
     propTypes: {
-        hasError: React.PropTypes.bool,
         label: React.PropTypes.string,
         type: React.PropTypes.string,
         name: React.PropTypes.string,
@@ -14,7 +13,7 @@ App.FormInput = React.createClass({
 
         return (
             <label className="radio label">
-                <input type={ type } className="radio input" name={ name.toLowerCase() } defaultValue={ value }/>
+                <input type={ type } className="radio input" name={ name.toLowerCase() } defaultValue={ value } required />
                 <span className="choice">{ label }</span>
             </label>
         )
