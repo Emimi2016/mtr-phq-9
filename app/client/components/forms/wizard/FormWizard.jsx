@@ -16,11 +16,10 @@ App.FormWizard = React.createClass({
 
     getMeteorData() {
         var data = {},
-            selector = {username: 'admin'},
-            handle = Meteor.subscribe('questions', selector);
+            handle = Meteor.subscribe('questions');
 
         if (handle.ready()) {
-            data.questions = Questions.find({}, {sort: {createdAt: -1}}).fetch();
+            data.questions = Questions.find({}, {sort: {order: 1}}).fetch();
         }
 
         return data;
@@ -134,6 +133,7 @@ App.FormWizard = React.createClass({
                 <div className="progress meter">
                     <progress className="progress bar" style={style}></progress>
                 </div>
+                {this.renderQuestion()}
                 {this.showStep()}
                 <span className="progress step">{this.state.step} / 9</span>
             </div>

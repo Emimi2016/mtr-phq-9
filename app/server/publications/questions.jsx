@@ -1,6 +1,5 @@
-Meteor.publish('questions', function (selector) {
-    check(selector, Object);
-    return Questions.find(selector);
+Meteor.publish('questions', function () {
+    return Questions.find();
 });
 
 Meteor.publish('question', function (questionId) {
