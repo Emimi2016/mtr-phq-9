@@ -23,7 +23,7 @@ App.Questions = React.createClass({
             sum += Number($(this).val());
         });
 
-        (sum >= threshold) ? console.log('1') : console.log('2');
+        (sum >= threshold) ? FlowRouter.go('Referrals') : FlowRouter.go('Complete');
     },
 
     renderQuestion() {
