@@ -13,7 +13,7 @@ App.Diagnosis = React.createClass({
         return data;
     },
 
-    renderScore() {
+    renderScores() {
         return this.data.scores.map(function (score) {
             if (score.sum >= 0 && score.sum <= 4) {
                 return (
@@ -72,7 +72,7 @@ App.Diagnosis = React.createClass({
     render() {
         return (
             <main className="animated fadeIn diagnosis view">
-                {(this.data.scores) ? this.renderScore() : <App.Loading />}
+                {(this.data.scores) ? this.renderScores() : <App.Loading />}
                 <a className="fluid button" href="/">Take the PHQ-9 Again</a>
             </main>
         )
