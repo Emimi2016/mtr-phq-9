@@ -16,26 +16,29 @@ App.Questions = React.createClass({
     calculateChoices: function (event) {
         event.preventDefault();
 
+        var sum = 0;
         $('.radio.input:checked').each(function() {
-            var value = $(this).val();
-            console.log(value);
-            // @TODO: Calculate sum of values
-            // If sum is >= 10 route to referral list view
-            // else route to positive view
+            sum += Number($(this).val());
         });
+
+        if (sum >= 10) {
+            console.log('route to referrals');
+        } else {
+            console.log('route to positive');
+        }
     },
 
     renderQuestion() {
         return this.data.questions.map(function (question) {
             return (
                 <section className="question" key={question._id}>
-                    <h2 className="title">{question.order}. {question.title}</h2>
+                    <h2 className="title">{question.order}. {question.question}</h2>
 
                     <div className="radio input group">
-                        <App.FormInput type="radio" label={question.choices[0].choice} name={question.order} value={question.choices[0].value} />
-                        <App.FormInput type="radio" label={question.choices[1].choice} name={question.order} value={question.choices[1].value} />
-                        <App.FormInput type="radio" label={question.choices[2].choice} name={question.order} value={question.choices[2].value} />
-                        <App.FormInput type="radio" label={question.choices[3].choice} name={question.order} value={question.choices[3].value} />
+                        <App.FormInput type="radio" label={question.choices[0].choice} name={question.name} value={question.choices[0].value} />
+                        <App.FormInput type="radio" label={question.choices[1].choice} name={question.name} value={question.choices[1].value} />
+                        <App.FormInput type="radio" label={question.choices[2].choice} name={question.name} value={question.choices[2].value} />
+                        <App.FormInput type="radio" label={question.choices[3].choice} name={question.name} value={question.choices[3].value} />
                     </div>
                 </section>
             )
