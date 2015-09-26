@@ -23,7 +23,7 @@ App.Questions = React.createClass({
                 <div className="question" key={question._id}>
                     <h2 className="title">{question.title}</h2>
 
-                    <div className="choices">
+                    <div className="radio input group">
                         <label className="radio label">
                             <input type="radio" className="radio input" name={question.order} value={question.choices[0].value} />
                             {question.choices[0].choice}
@@ -48,9 +48,9 @@ App.Questions = React.createClass({
 
     render: function () {
         return (
-            <form className="form wizard module">
+            <form className="questions form module">
                 {(this.data.questions) ? this.renderQuestion() : 'Loading...'}
-                <button type="submit" className="fluid primary button">Evaluate</button>
+                <button type="submit" className="fluid primary button">Feel Better</button>
             </form>
         )
     }
