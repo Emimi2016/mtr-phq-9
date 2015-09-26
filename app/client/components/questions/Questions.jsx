@@ -16,16 +16,14 @@ App.Questions = React.createClass({
     calculateChoices: function (event) {
         event.preventDefault();
 
-        var sum = 0;
+        var sum = 0,
+            threshold = 10;
+
         $('.radio.input:checked').each(function() {
             sum += Number($(this).val());
         });
 
-        if (sum >= 10) {
-            console.log('route to referrals');
-        } else {
-            console.log('route to positive');
-        }
+        (sum >= threshold) ? console.log('1') : console.log('2');
     },
 
     renderQuestion() {
