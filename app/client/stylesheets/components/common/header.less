@@ -3,11 +3,25 @@
 // header styles
 
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   padding: @space-base;
+  background-color: @gray-light;
   text-align: center;
 
-  .title {
+  .logo {
     margin: 0;
+    
+    .route {
+      color: @light;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: @primary-color;
+      }
+    }
   }
 }
