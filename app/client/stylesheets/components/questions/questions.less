@@ -3,5 +3,9 @@
 // questions form styles
 
 .questions.form.module {
-  margin-top: @space-large;
+  margin-top: @space-base;
+
+  @media (min-width: @desktop-width) {
+    margin-top: @space-large;
+  }
 }
