@@ -11,4 +11,8 @@ Meteor.startup(function () {
     if (Questions.find().count() === 0) {
         loadFixture(Fixtures['questions'], Questions);
     }
+
+    if (Doctors.find().count() === 0) {
+        loadFixture(Fixtures['doctors'], Doctors);
+    }
 });

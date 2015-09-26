@@ -26,7 +26,7 @@ App.Questions = React.createClass({
         (sum >= threshold) ? FlowRouter.go('Referrals') : FlowRouter.go('Complete');
     },
 
-    renderQuestion() {
+    renderQuestions() {
         return this.data.questions.map(function (question) {
             return (
                 <section className="question" key={question._id}>
@@ -46,7 +46,7 @@ App.Questions = React.createClass({
     render: function () {
         return (
             <form className="questions form module" onSubmit={this.calculateChoices}>
-                {(this.data.questions) ? this.renderQuestion() : <App.Loading />}
+                {(this.data.questions) ? this.renderQuestions() : <App.Loading />}
                 <button type="submit" className="fluid primary button">Feel Better</button>
             </form>
         )

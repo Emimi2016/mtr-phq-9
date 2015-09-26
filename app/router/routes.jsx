@@ -16,6 +16,15 @@ FlowRouter.route('/referrals', {
     }
 });
 
+FlowRouter.route('/appointments', {
+    name: 'Appointments',
+    action() {
+        ReactLayout.render(App.Layout, {
+            content: <App.Appointments />
+        });
+    }
+});
+
 FlowRouter.route('/complete', {
     name: 'Complete',
     action() {
