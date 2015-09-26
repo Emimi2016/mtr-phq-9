@@ -13,30 +13,16 @@ App.Questions = React.createClass({
         return data;
     },
 
-    submitSurvey: function (event) {
+    calculateChoices: function (event) {
         event.preventDefault();
-
-        var surveyResults = {
-            question1: $(event.target).find('input[name="1"]:checked').val(),
-            question2: $(event.target).find('input[name="2"]:checked').val(),
-            question3: $(event.target).find('input[name="3"]:checked').val(),
-            question4: $(event.target).find('input[name="4"]:checked').val(),
-            question5: $(event.target).find('input[name="5"]:checked').val(),
-            question6: $(event.target).find('input[name="6"]:checked').val(),
-            question7: $(event.target).find('input[name="7"]:checked').val(),
-            question8: $(event.target).find('input[name="8"]:checked').val(),
-            question9: $(event.target).find('input[name="9"]:checked').val()
-        };
 
         $('.radio.input:checked').each(function() {
             var value = $(this).val();
             console.log(value);
+            // @TODO: Calculate sum of values
+            // If sum is >= 10 route to referral list view
+            // else route to positive view
         });
-
-        console.log(surveyResults);
-
-        // TODO: Evaluate and route to positive or negative
-
     },
 
     renderQuestion() {
@@ -58,7 +44,7 @@ App.Questions = React.createClass({
 
     render: function () {
         return (
-            <form className="questions form module" onSubmit={this.submitSurvey}>
+            <form className="questions form module" onSubmit={this.calculateChoices}>
                 {(this.data.questions) ? this.renderQuestion() : <App.Loading />}
                 <button type="submit" className="fluid primary button">Feel Better</button>
             </form>
