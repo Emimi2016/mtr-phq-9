@@ -5,7 +5,7 @@ App.Root = React.createClass({
                 <p className="intro statement">
                     Over the last two weeks, how often have you been bothered by any of the following problems?
                 </p>
-                <App.FormWizard />
+                <App.Questions />
             </main>
         )
     }
