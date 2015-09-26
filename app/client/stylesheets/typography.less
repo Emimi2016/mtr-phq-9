@@ -8,6 +8,7 @@ html {
     color: @font-color;
     font-family: @font-family-base;
     font-size: @font-size-base;
+    font-weight: bold;
     line-height: @line-height-base;
 
     p, a, li, td, blockquote, article, figure, pre, code, button, input, label {
@@ -57,10 +58,6 @@ html {
       &:focus {
         color: @link-color;
         text-decoration: underline;
-      }
-
-      &:visited {
-        color: darken(@link-color, 1.5%);
       }
 
       &:active {

@@ -22,19 +22,19 @@ App.Doctors = React.createClass({
     renderDoctors() {
         return this.data.doctors.map(function (doctor) {
             return (
-                <figure className="doctor" key={doctor._id}>
+                <a className="doctor" href="/Appointments" key={doctor._id}>
                     <img className="image thumb" src={doctor.image} />
-                    <figcaption className="name">
+                    <h4 className="name">
                         {doctor.name}
-                    </figcaption>
-                </figure>
+                    </h4>
+                </a>
             )
         });
     },
 
     render: function () {
         return (
-            <div className="doctors module" onSubmit={this.setAppointment}>
+            <div className="centered doctors module" onSubmit={this.setAppointment}>
                 {(this.data.doctors) ? this.renderDoctors() : <App.Loading />}
             </div>
         )
