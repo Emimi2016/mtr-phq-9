@@ -56,6 +56,48 @@ Have a look at the repository for more information.
 
 ## Structure
 
+### Folder structure
+
+```
+app/                # Application folder
+  client/             # Client folder
+    components/          # Contains react components
+          common/             # Common components (i.e. header, footer)
+          doctors/            # Doctors modules / components
+          elements/           # HTML elements components (i.e. forms, lists, buttons)
+          layouts/            # Router layouts
+          questions/          # Questions form modules / components
+          quotes/             # Quotes modules / components
+          views/              # All the views (routes)
+    stylesheets         # LESS files (with autoprefixer)
+      components/         # Components styles
+        common/             # Common components styles
+        doctors/            # Doctors module styles
+        layouts/            # All layouts styles
+        questions/          # Questions form module styles
+        scores/             # Scores module styles
+        views/              # All views (routes) styles
+      elements.less       # html elements and modules styles
+      helpers.less        # style helpers for global use
+      typography.less     # global typigraphy styles
+      variables.less      # All LESS variables
+  collections/        # All Collections
+  lib/                # Lib files that get executed first
+  public/             # Public files
+    images/             # Public image files
+  router/             # All routes
+  server/             # Server folder
+    fixtures/           # Meteor.Collection fixtures defined
+    methods/            # Server methods
+    publications/       # Collection publications
+    startup/            # On server startup
+environments/       # Environments folder
+  build/              # testing environment
+  local/              # local environment
+  production/         # production environment
+
+```
+
 ### Packages Used
 
 * Meteor Core
@@ -84,49 +126,6 @@ Have a look at the repository for more information.
 * Development
   * [flemay:less-autoprefixer](https://github.com/flemay/less-autoprefixer)
   * [msavin:mongol](https://github.com/msavin/Mongol)
-
-### Folder structure
-
-```
-app/                # Application folder
-  client/             # Client folder
-    compatibility/      # Libraries which create a global variable
-    config/             # Configuration files (on the client)
-    lib/                # Library files that get executed first
-    startup/            # Javascript files on Meteor.startup()
-    stylesheets         # LESS files
-    components/          # Contains react components
-      common/             # Common components (i.e. header, footer)
-      forms/              # All forms
-      layouts/            # Router layouts
-      views/              # All the views
-  collections/        # All Collections
-    client/             # Client Collections
-    server/             # Server Collections
-  lib/                # Lib files that get executed first
-  packages/           # Packages folder (custom meteor packages, npm)
-  private/            # Private files
-  public/             # Public files
-  router/             # All routes
-  server/             # Server folder
-    fixtures/           # Meteor.Collection fixtures defined
-    lib/                # Server side library folder
-    methods/            # Server methods
-    publications/       # Collection publications
-    startup/            # On server startup
-  tests/              # All tests
-    client/             # client tests
-      integration/        # integration tests
-      unit/               # unit tests
-    server/             # server tests
-      integration/        # integration tests
-      unit/               # unit tests
-environments/       # Environments folder
-  build/              # testing environment
-  local/              # local environment
-  production/         # production environment
-
-```
 
 ## License
 
