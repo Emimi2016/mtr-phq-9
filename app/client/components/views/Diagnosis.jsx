@@ -49,7 +49,7 @@ App.Diagnosis = React.createClass({
                     <div className="scores module" key={score._id}>
                         <h1 className="negative score">You scored a {score.sum}!
                             <small className="message">You seem to have moderately severe depression... consider seeing one of
-                                these specialists.</small>
+                                these specialists:</small>
                         </h1>
                         <App.Doctors />
                     </div>
@@ -60,7 +60,7 @@ App.Diagnosis = React.createClass({
                     <div className="scores module" key={score._id}>
                         <h1 className="negative score">You scored a {score.sum}!
                             <small className="message">You seem to have severe depression... please schedule to see one of these
-                                specialists.</small>
+                                specialists:</small>
                         </h1>
                         <App.Doctors />
                     </div>
@@ -73,7 +73,7 @@ App.Diagnosis = React.createClass({
         return (
             <main className="animated fadeIn diagnosis view">
                 {(this.data.scores) ? this.renderScore() : <App.Loading />}
-                <a className="fluid button" href="/">Take the PHQ-9 Survey</a>
+                <a className="fluid button" href="/">Take the PHQ-9 Again</a>
             </main>
         )
     }

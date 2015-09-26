@@ -7,7 +7,7 @@ App.Appointments = React.createClass({
                 <div className="centered message module">
                     <h1 className="positive message">Your appointment is now scheduled!</h1>
                 </div>
-                <a className="fluid button" href="/">Take the PHQ-9 Survey</a>
+                <a className="fluid button" href="/">Take the PHQ-9 Again</a>
             </main>
         )
     }

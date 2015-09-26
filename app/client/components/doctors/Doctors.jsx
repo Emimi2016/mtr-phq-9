@@ -13,16 +13,10 @@ App.Doctors = React.createClass({
         return data;
     },
 
-    setAppointment: function (event) {
-        event.preventDefault();
-
-        FlowRouter.go('Appointments');
-    },
-
     renderDoctors() {
         return this.data.doctors.map(function (doctor) {
             return (
-                <a className="doctor" href="/Appointments" key={doctor._id}>
+                <a className="doctor" href="/appointments" key={doctor._id}>
                     <img className="image thumb" src={doctor.image} />
                     <h4 className="name">
                         {doctor.name}
@@ -34,7 +28,7 @@ App.Doctors = React.createClass({
 
     render: function () {
         return (
-            <div className="centered doctors module" onSubmit={this.setAppointment}>
+            <div className="centered doctors module">
                 {(this.data.doctors) ? this.renderDoctors() : <App.Loading />}
             </div>
         )
