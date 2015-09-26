@@ -92,7 +92,6 @@ app/                # Application folder
     publications/       # Collection publications
     startup/            # On server startup
 environments/       # Environments folder
-  build/              # testing environment
   local/              # local environment
   production/         # production environment
 

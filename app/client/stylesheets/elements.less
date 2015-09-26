@@ -5,6 +5,8 @@
 // buttons
 
 .button {
+  display: block;
+  position: relative;
   cursor: pointer;
   margin: 0;
   padding: @space-base;
@@ -14,13 +16,38 @@
   color: @gray-light;
   text-align: center;
   text-decoration: none;
-  transition: all @fast;
+  vertical-align: middle;
+  appearance: button;
+  backface-visibility: hidden;
+  transition: background-color @fast, color @fast;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: @full;
+    height: @full;
+    border-color: @gray;
+    z-index: -1;
+    border-radius: inherit;
+    opacity: 0;
+    transform: scale3d(0.6, 0.6, 1);
+    transition: transform @fast, opacity @fast;
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  }
 
   &:hover,
   &:focus {
     background-color: @gray-light;
     color: @light;
     text-decoration: none;
+
+    &:before {
+      transform: scale3d(1, 1, 1);
+      opacity: 1;
+    }
   }
 
   &.primary {
