@@ -70,6 +70,7 @@ Have a look at the repository for more information.
   * [session](https://github.com/meteor/meteor/tree/devel/packages/session)
   * [standard-minifiers](https://github.com/meteor/meteor/tree/devel/packages/standard-minifiers)
   * [tracker](https://github.com/meteor/meteor/tree/devel/packages/tracker)
+  * [check](https://github.com/meteor/meteor/tree/devel/packages/check)
 * Routing
   * [kadira:flow-router](https://github.com/kadirahq/flow-router)
   * [kadira:react-layout](https://github.com/kadirahq/meteor-react-layout)
@@ -80,8 +81,6 @@ Have a look at the repository for more information.
 * UI and UX
   * [fastclick](http://github.com/meteor/meteor/tree/devel/packages/fastclick)
 * Development
-  * [insecure](https://github.com/meteor/meteor/tree/devel/packages/insecure)
-  * [autopublish](https://github.com/meteor/meteor/tree/devel/packages/autopublish)
   * [flemay:less-autoprefixer](https://github.com/flemay/less-autoprefixer)
   * [maxharris9:object-assign](https://github.com/maxharris9/object-assign)
   * [msavin:mongol](https://github.com/msavin/Mongol)
