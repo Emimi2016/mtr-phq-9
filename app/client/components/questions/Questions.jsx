@@ -49,7 +49,7 @@ App.Questions = React.createClass({
     render: function () {
         return (
             <form className="questions form module">
-                {(this.data.questions) ? this.renderQuestion() : 'Loading...'}
+                {(this.data.questions) ? this.renderQuestion() : <App.Loading />}
                 <button type="submit" className="fluid primary button">Feel Better</button>
             </form>
         )

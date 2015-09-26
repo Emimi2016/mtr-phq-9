@@ -82,7 +82,6 @@ Have a look at the repository for more information.
   * [fastclick](http://github.com/meteor/meteor/tree/devel/packages/fastclick)
 * Development
   * [flemay:less-autoprefixer](https://github.com/flemay/less-autoprefixer)
-  * [maxharris9:object-assign](https://github.com/maxharris9/object-assign)
   * [msavin:mongol](https://github.com/msavin/Mongol)
 
 ### Folder structure
