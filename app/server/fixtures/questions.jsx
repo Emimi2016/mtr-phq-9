@@ -1,7 +1,5 @@
 Fixtures = typeof Fixtures !== 'undefined' ? Fixtures : {};
 
-var now = new Date();
-
 Fixtures.questions = [
     {
         order: 1,
@@ -24,8 +22,7 @@ Fixtures.questions = [
                 choice: 'Nearly every day',
                 value: 3
             }
-        ],
-        createdAt: now
+        ]
     },
     {
         order: 2,
@@ -48,8 +45,7 @@ Fixtures.questions = [
                 choice: 'Nearly every day',
                 value: 3
             }
-        ],
-        createdAt: now
+        ]
     },
     {
         order: 3,
@@ -72,8 +68,7 @@ Fixtures.questions = [
                 choice: 'Nearly every day',
                 value: 3
             }
-        ],
-        createdAt: now
+        ]
     },
     {
         order: 4,
@@ -96,8 +91,7 @@ Fixtures.questions = [
                 choice: 'Nearly every day',
                 value: 3
             }
-        ],
-        createdAt: now
+        ]
     },
     {
         order: 5,
@@ -120,8 +114,7 @@ Fixtures.questions = [
                 choice: 'Nearly every day',
                 value: 3
             }
-        ],
-        createdAt: now
+        ]
     },
     {
         order: 6,
@@ -144,8 +137,7 @@ Fixtures.questions = [
                 choice: 'Nearly every day',
                 value: 3
             }
-        ],
-        createdAt: now
+        ]
     },
     {
         order: 7,
@@ -168,8 +160,7 @@ Fixtures.questions = [
                 choice: 'Nearly every day',
                 value: 3
             }
-        ],
-        createdAt: now
+        ]
     },
     {
         order: 8,
@@ -192,8 +183,7 @@ Fixtures.questions = [
                 choice: 'Nearly every day',
                 value: 3
             }
-        ],
-        createdAt: now
+        ]
     },
     {
         order: 9,
@@ -216,7 +206,6 @@ Fixtures.questions = [
                 choice: 'Nearly every day',
                 value: 3
             }
-        ],
-        createdAt: now
+        ]
     }
 ];
