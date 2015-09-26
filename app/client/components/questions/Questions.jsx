@@ -23,7 +23,15 @@ App.Questions = React.createClass({
             sum += Number($(this).val());
         });
 
-        (sum >= threshold) ? FlowRouter.go('Referrals') : FlowRouter.go('Complete');
+        Meteor.call('insertScore', sum, (err) => {
+            if (err) {
+                console.error('There was an error inserting into scores collection');
+            } else {
+                FlowRouter.go('Diagnosis');
+            }
+        });
+
+        //(sum >= threshold) ? FlowRouter.go('Referrals') : FlowRouter.go('Complete');
     },
 
     renderQuestions() {

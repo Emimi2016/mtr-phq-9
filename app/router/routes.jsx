@@ -7,6 +7,15 @@ FlowRouter.route('/', {
     }
 });
 
+FlowRouter.route('/diagnosis', {
+    name: 'Diagnosis',
+    action() {
+        ReactLayout.render(App.Layout, {
+            content: <App.Diagnosis />
+        });
+    }
+});
+
 FlowRouter.route('/referrals', {
     name: 'Referrals',
     action() {
