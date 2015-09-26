@@ -8,7 +8,7 @@ Fixtures.questions = [
         title: 'Little interest or pleasure in doing things?',
         choices: [
             {
-                choice: 'Not at all',
+                title: 'Not at all',
                 value: 0
             },
             {

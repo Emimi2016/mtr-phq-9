@@ -22,6 +22,25 @@ App.Questions = React.createClass({
             return (
                 <div className="question" key={question._id}>
                     <h2 className="title">{question.title}</h2>
+
+                    <div className="choices">
+                        <label className="radio label">
+                            <input type="radio" className="radio input" name={question.order} value={question.choices[0].value} />
+                            {question.choices[0].choice}
+                        </label>
+                        <label className="radio label">
+                            <input type="radio" className="radio input" name={question.order} value={question.choices[1].value} />
+                            {question.choices[1].choice}
+                        </label>
+                        <label className="radio label">
+                            <input type="radio" className="radio input" name={question.order} value={question.choices[2].value} />
+                            {question.choices[2].choice}
+                        </label>
+                        <label className="radio label">
+                            <input type="radio" className="radio input" name={question.order} value={question.choices[3].value} />
+                            {question.choices[3].choice}
+                        </label>
+                    </div>
                 </div>
             )
         });
