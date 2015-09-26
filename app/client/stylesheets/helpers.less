@@ -1,0 +1,55 @@
+@import 'variables';
+
+// helper styles
+
+.positive {
+  color: @positive-color;
+}
+
+.negative {
+  color: @negative-color;
+}
+
+.caution {
+  color: @caution-color;
+}
+
+.info {
+  color: @info-color;
+}
+
+.emphasis {
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+
+  &.mobile {
+
+    @media (min-width: @tablet-width) {
+      display: inline-block;
+    }
+  }
+}
+
+.brand {
+  color: @primary-color;
+
+  .background {
+    background-color: @primary-color;
+    color: @light;
+  }
+
+  .font {
+    background-color: none;
+  }
+}
+
+// wildcard
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

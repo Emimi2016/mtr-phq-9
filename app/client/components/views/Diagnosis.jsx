@@ -18,8 +18,8 @@ App.Diagnosis = React.createClass({
             if (score.sum >= 0 && score.sum <= 4) {
                 return (
                     <div className="centered scores module">
-                        <h1 className="score">You scored a {score.sum}!
-                            <small className="positive message">You don't seem to be depressed... stay happy.</small>
+                        <h1 className="positive score">You scored a {score.sum}!
+                            <small className="message">You don't seem to be depressed... stay happy.</small>
                         </h1>
                     </div>
                 )
@@ -27,8 +27,8 @@ App.Diagnosis = React.createClass({
             if (score.sum >= 5 && score.sum <= 9) {
                 return (
                     <div className="centered scores module">
-                        <h1 className="score">You scored a {score.sum}!
-                            <small className="info message">You seem to have mild depression... all things pass.</small>
+                        <h1 className="caution score">You scored a {score.sum}!
+                            <small className="message">You seem to have mild depression... all things pass.</small>
                         </h1>
                     </div>
                 )
@@ -36,8 +36,8 @@ App.Diagnosis = React.createClass({
             if (score.sum >= 10 && score.sum <= 14) {
                 return (
                     <div className="scores module">
-                        <h1 className="score">You scored a {score.sum}!
-                            <small className="negative message">You seem to have moderate depression... how about seeing one of these
+                        <h1 className="negative score">You scored a {score.sum}!
+                            <small className="message">You seem to have moderate depression... how about seeing one of these
                                 specialists?</small>
                         </h1>
                         <App.Doctors />
@@ -47,8 +47,8 @@ App.Diagnosis = React.createClass({
             if (score.sum >= 15 && score.sum <= 19) {
                 return (
                     <div className="score module">
-                        <h1 className="score">You scored a {score.sum}!
-                            <small className="negative message">You seem to have moderately severe depression... consider seeing one of
+                        <h1 className="negative score">You scored a {score.sum}!
+                            <small className="message">You seem to have moderately severe depression... consider seeing one of
                                 these specialists.</small>
                         </h1>
                         <App.Doctors />
@@ -58,8 +58,8 @@ App.Diagnosis = React.createClass({
             if (score.sum >= 20 && score.sum <= 27) {
                 return (
                     <div className="scores module">
-                        <h1 className="score">You scored a {score.sum}!
-                            <small className="negative message">You seem to have severe depression... please schedule to see one of these
+                        <h1 className="negative score">You scored a {score.sum}!
+                            <small className="message">You seem to have severe depression... please schedule to see one of these
                                 specialists.</small>
                         </h1>
                         <App.Doctors />
