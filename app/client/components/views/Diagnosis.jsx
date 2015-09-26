@@ -9,7 +9,7 @@ App.Diagnosis = React.createClass({
 
         if (handle.ready()) {
             data.scores = Scores.find({}, {limit: 1, sort: {createdAt: -1}}).fetch();
-            //data.reports = Reports.find({}, {sort: {from: 1}}).fetch();
+            data.reports = Reports.find({}, {sort: {from: 1}}).fetch();
         }
 
         return data;
@@ -25,9 +25,6 @@ App.Diagnosis = React.createClass({
 
     renderScores() {
         return this.data.scores.map(function (score) {
-            //for(var i = 0; i < this.data.reports.length; ++i) {
-            //    console.log(i)
-            //}
             if (score.sum >= 0 && score.sum <= 4) {
                 return (
                     <div className="centered scores module" key={score._id}>
