@@ -16,9 +16,11 @@ Mobile-first PHQ-9 prototype built with React and Meteor.
 
 ## Roadmap
 
-* Setup build environments (for testing)
-* Security (permissions, accounts)
-* Server (methods, publications, indexes)
+* Setup build environments and write tests
+* Security (permissions, accounts, index by userId)
+* Quotes Component tied to Collection
+* Mobile native (cardovo, phonegap)
+* Refactor code (todos)
 
 ## How to use
 
@@ -62,13 +64,13 @@ Have a look at the repository for more information.
 app/                # Application folder
   client/             # Client folder
     components/          # Contains react components
-          common/             # Common components (i.e. header, footer)
-          doctors/            # Doctors modules / components
-          elements/           # HTML elements components (i.e. forms, lists, buttons)
-          layouts/            # Router layouts
-          questions/          # Questions form modules / components
-          quotes/             # Quotes modules / components
-          views/              # All the views (routes)
+      common/             # Common components (i.e. header, footer)
+      doctors/            # Doctors modules / components
+      elements/           # HTML elements components (i.e. forms, lists, buttons)
+      layouts/            # Router layouts
+      questions/          # Questions form modules / components
+      quotes/             # Quotes modules / components
+      views/              # All the views (routes)
     stylesheets         # LESS files (with autoprefixer)
       components/         # Components styles
         common/             # Common components styles
