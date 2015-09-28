@@ -9,11 +9,11 @@ App.FormInput = React.createClass({
         return true;
     },
     render() {
-        const {label, type, name, value } = this.props;
+        const {label, type, name, value} = this.props;
 
         return (
             <label className="radio label">
-                <input type={ type } className="radio input" name={ name.toLowerCase() } defaultValue={ value } required />
+                <input type={ type } className="radio input" name={ name.toLowerCase() } defaultValue={ value } />
                 <span className="choice">{ label }</span>
             </label>
         )
