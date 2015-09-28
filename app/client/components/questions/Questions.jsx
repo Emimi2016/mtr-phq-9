@@ -17,8 +17,8 @@ App.Questions = React.createClass({
 
     calculateChoices: function (event) {
         event.preventDefault();
-        // refactor validation into form alerts module
 
+        // TODO: refactor validation into form alerts module
         var score = 0,
             valid = false,
             question = $('.radio.input.group'),
