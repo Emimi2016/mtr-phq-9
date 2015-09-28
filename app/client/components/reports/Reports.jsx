@@ -19,6 +19,7 @@ App.Reports = React.createClass({
             return (
                 <figure className={report.class} key={report._id}>
                     <h1 className="score">You scored a {report.score}!</h1>
+
                     <p className="message">{report.message}</p>
                     {(report.class === 'negative report') ? <App.Doctors /> : ''}
                 </figure>
