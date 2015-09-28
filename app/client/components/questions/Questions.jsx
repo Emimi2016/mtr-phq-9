@@ -16,22 +16,19 @@ App.Questions = React.createClass({
     calculateChoices: function (event) {
         event.preventDefault();
 
-        var sum = 0,
-            threshold = 10;
+        var score = 0;
 
         $('.radio.input:checked').each(function() {
-            sum += Number($(this).val());
+            score += Number($(this).val());
         });
 
-        Meteor.call('insertScore', sum, (err) => {
-            if (err) {
-                console.error('There was an error inserting into scores collection');
+        Meteor.call('insertReport', score, (error) => {
+            if (error) {
+                console.error('There was an error inserting into scores collection: ' + error);
             } else {
                 FlowRouter.go('Diagnosis');
             }
         });
-
-        //(sum >= threshold) ? FlowRouter.go('Referrals') : FlowRouter.go('Complete');
     },
 
     renderQuestions() {

@@ -15,8 +15,4 @@ Meteor.startup(function () {
     if (Doctors.find().count() === 0) {
         loadFixture(Fixtures['doctors'], Doctors);
     }
-
-    if (Reports.find().count() === 0) {
-        loadFixture(Fixtures['reports'], Reports);
-    }
 });
