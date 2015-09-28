@@ -74,7 +74,7 @@ App.Questions = React.createClass({
     render: function () {
         return (
             <form className="questions form module" onSubmit={this.calculateChoices}>
-                <App.FormAlerts alert="animated fadeInDown form alert module" type="negative message" message="Please answer all the questions" />
+                <App.FormAlerts alert="animated bounceInDown form alert module" type="negative message" message="Please answer all the questions" />
                 {(this.data.questions) ? this.renderQuestions() : <App.Loading />}
                 <button type="submit" className="fluid primary button">Feel Better</button>
             </form>

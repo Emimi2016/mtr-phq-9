@@ -148,11 +148,19 @@
     position: fixed;
     top: 0;
     right: 0;
-    padding: @space-base;
-    background-color: fade(@gray-light, @three-quarters);
+    width: @full;
+    padding: @space-tiny;
+    background-color: fade(@gray-light, 95%);
+    text-align: center;
+    
+    @media (min-width: @tablet-width) {
+      width: auto;
+      text-align: right;
+    }
 
     .message {
       margin: 0;
+      font-weight: bold;
     }
   }
 
