@@ -2,26 +2,6 @@
 
 // helper styles
 
-.positive {
-  color: @positive-color;
-}
-
-.negative {
-  color: @negative-color;
-}
-
-.caution {
-  color: @caution-color;
-}
-
-.info {
-  color: @info-color;
-}
-
-.emphasis {
-  font-style: italic;
-}
-
 .hidden {
   display: none;
 
@@ -43,6 +23,21 @@
 
   .font {
     background-color: none;
+  }
+}
+
+.message {
+
+  &.positive {
+    color: @positive-color;
+  }
+
+  &.caution {
+    color: @caution-color;
+  }
+
+  &.negative {
+    color: @negative-color;
   }
 }
 

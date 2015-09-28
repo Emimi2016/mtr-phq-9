@@ -10,10 +10,31 @@
     .score {
       margin: @space-base auto;
       text-align: center;
+    }
 
-      .message {
-        display: block;
-        margin-top: @space-base;
+    .message {
+      display: block;
+      margin-top: @space-base;
+    }
+
+    &.positive {
+
+      .score {
+        color: @positive-color;
+      }
+    }
+
+    &.caution {
+
+      .score {
+        color: @caution-color;
+      }
+    }
+
+    &.negative {
+
+      .score {
+        color: @negative-color;
       }
     }
   }

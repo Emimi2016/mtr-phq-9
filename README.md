@@ -7,8 +7,7 @@ Mobile-first PHQ-9 prototype built with React and Meteor.
 * [Roadmap](#roadmap)
 * [How to use](#how-to-use)
   * [Requirements](#requirements)
-  * [Installation](#installation)
-  * [Deployments](#deployments)
+  * [Run Locally](#run-locally)
 * [Structure](#structure)
   * [Packages used](#packages-used)
   * [Folder structure](#folder-structure)
@@ -20,7 +19,7 @@ Mobile-first PHQ-9 prototype built with React and Meteor.
 * Security (permissions, accounts, index by userId)
 * Quotes Component tied to Collection
 * Mobile native (cardovo, phonegap)
-* Refactor code (todos)
+* Refactor code (see todos)
 
 ## How to use
 
@@ -32,7 +31,7 @@ Make sure [Meteor is installed and up to date](https://www.meteor.com/install) o
 curl https://install.meteor.com/ | sh
 ```
 
-### Installation
+### Run Locally
 
 ```
 git clone git@github.com:amazingBastard/mtr-phq-9.git
@@ -51,10 +50,11 @@ Now you can start the app with the following command:
 ./run.sh
 ```
 
-### Deployments
+The app should now be running on:
 
-It is highly recommended to use [Meteor Up](https://github.com/arunoda/meteor-up) for easy deployments.
-Have a look at the repository for more information.
+```
+http://localhost:3000
+```
 
 ## Structure
 

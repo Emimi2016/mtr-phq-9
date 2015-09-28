@@ -16,56 +16,58 @@ App.Reports = React.createClass({
     },
 
     renderReports() {
-        // TODO: integrate with reports component
-        // loop through using from to variables in reports
+        // TODO: integrate with scores component (for loop)
         return this.data.scores.map(function (score) {
             if (score.sum >= 0 && score.sum <= 4) {
                 return (
-                    <figure className="report" key={score._id}>
-                        <h1 className="positive score">You scored a {score.sum}!
-                            <small className="message">You don't seem to be depressed... stay happy.</small>
-                        </h1>
+                    <figure className="positive report" key={score._id}>
+                        <App.Scores />
+
+                        <p className="message">You don't seem to be depressed... stay happy.</p>
                     </figure>
                 )
             }
             if (score.sum >= 5 && score.sum <= 9) {
                 return (
-                    <figure className="report" key={score._id}>
-                        <h1 className="caution score">You scored a {score.sum}!
-                            <small className="message">You seem to have mild depression... all things pass.</small>
-                        </h1>
+                    <figure className="caution report" key={score._id}>
+                        <App.Scores />
+
+                        <p className="message">You seem to have mild depression... all things pass.</p>
+
                     </figure>
                 )
             }
             if (score.sum >= 10 && score.sum <= 14) {
                 return (
-                    <figure className="report" key={score._id}>
-                        <h1 className="negative score">You scored a {score.sum}!
-                            <small className="message">You seem to have moderate depression... how about seeing one of these
-                                specialists?</small>
-                        </h1>
+                    <figure className="negative report" key={score._id}>
+                        <App.Scores />
+
+                        <p className="message">You seem to have moderate depression... how about seeing one of
+                            these
+                            specialists?
+                        </p>
                         <App.Doctors />
                     </figure>
                 )
             }
             if (score.sum >= 15 && score.sum <= 19) {
                 return (
-                    <figure className="report" key={score._id}>
-                        <h1 className="negative score">You scored a {score.sum}!
-                            <small className="message">You seem to have moderately severe depression... consider seeing one of
-                                these specialists:</small>
-                        </h1>
+                    <figure className="negative report" key={score._id}>
+                        <App.Scores />
+
+                        <p className="message">You seem to have moderately severe depression... consider seeing one of
+                            these specialists:</p>
                         <App.Doctors />
                     </figure>
                 )
             }
             if (score.sum >= 20 && score.sum <= 27) {
                 return (
-                    <figure className="report" key={score._id}>
-                        <h1 className="negative score">You scored a {score.sum}!
-                            <small className="message">You seem to have severe depression... please schedule to see one of these
-                                specialists:</small>
-                        </h1>
+                    <figure className="negative report" key={score._id}>
+                        <App.Scores />
+
+                        <p className="message">You seem to have severe depression... please schedule to see one of these
+                            specialists:</p>
                         <App.Doctors />
                     </figure>
                 )
