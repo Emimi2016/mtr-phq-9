@@ -4,7 +4,7 @@ Mobile-first PHQ-9 prototype built with React and Meteor.
 
 > I decided to build this project in Meteor and React for a couple of reasons. I chose Meteor because it's a very fast way to prototype apps. I felt more comfortable in this environment because I've been working with it for a while now. Using react with Meteor is a good way to create your app's client while dealing with incoming data. The components are about 90% recyclable if they need to be plugged into another backend.
 
-[DEMO](http://phq9.meteor.com)
+[VIEW THE DEMO](http://phq9.meteor.com)
 
 * [Roadmap](#roadmap)
 * [How to use](#how-to-use)
